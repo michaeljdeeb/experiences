@@ -1,0 +1,11 @@
+# Site settings
+name: michaeljdeeb.com
+title: "Michael J. Deeb"
+baseurl: "/" # the subpath of your site, e.g. /blog/
+url: "http://michaeljdeeb.com" # the base hostname & protocol for your site
+permalink: /experiences/:title
+twitter_username: michaeljdeeb
+github_username:  michaeljdeeb
+timezone: America/Los_Angeles
+# Build settings
+markdown: kramdown
