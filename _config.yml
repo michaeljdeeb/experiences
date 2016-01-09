@@ -9,3 +9,5 @@ github_username:  michaeljdeeb
 timezone: America/Los_Angeles
 # Build settings
 markdown: kramdown
+sass:
+    style: compressed
