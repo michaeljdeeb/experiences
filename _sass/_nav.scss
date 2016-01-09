@@ -1,0 +1,44 @@
+nav {
+  background: $brand-dark-blue;
+  background: linear-gradient(to right, $brand-dark-blue, $brand-light-blue);
+  -webkit-font-smoothing: subpixel-antialiased;
+  height: $nav-height;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  ul {
+    margin: 0 auto;
+    max-width: $desktop-breakpoint;
+    padding: 0;
+    list-style: none;
+
+    li {
+      display: inline-block;
+    }
+
+    a {
+      color: #fff;
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      padding: 1.875em 1.25em .875em;
+      line-height: 1em;
+    }
+
+    li:nth-child(1) {
+      font-size: 1.25em;
+
+      a {
+        padding: 1.3em 1em .7em;
+      }
+    }
+
+    a:hover {
+      background-color: #fff;
+      color: $brand-dark-blue;
+    }
+
+  }
+}
