@@ -1,12 +1,13 @@
 nav {
-  background: $brand-dark-blue;
-  background: linear-gradient(to right, $brand-dark-blue, $brand-light-blue);
+  background: $brand-dark;
+  background: linear-gradient(to right, $brand-dark, $brand-light);
   -webkit-font-smoothing: subpixel-antialiased;
   height: $nav-height;
   left: 0;
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 1;
 
   ul {
     margin: 0 auto;
@@ -16,6 +17,15 @@ nav {
 
     li {
       display: inline-block;
+      float:left;
+
+      &:nth-child(1) {
+        font-size: 1.25em;
+
+        a {
+          padding: 1.3em 1em .7em;
+        }
+      }
     }
 
     a {
@@ -25,20 +35,45 @@ nav {
       text-decoration: none;
       padding: 1.875em 1.25em .875em;
       line-height: 1em;
-    }
 
-    li:nth-child(1) {
-      font-size: 1.25em;
+      &:visited {
+        color: #fff;
+      }
 
-      a {
-        padding: 1.3em 1em .7em;
+      &:hover {
+        background-color: #fff;
+        color: $brand-dark;
+        text-decoration: none;
       }
     }
 
-    a:hover {
+    & li.active a {
       background-color: #fff;
-      color: $brand-dark-blue;
+      color: $brand-dark;
+    }
+  }
+}
+
+@media screen and (max-width: $mobile-breakpoint) {
+  nav {
+    height: $mobile-nav-height;
+
+    ul {
+      li {
+        // text-align: left;
+        // display: list-item;
+        a {
+          padding: 0;
+        }
+
+        &:not(&:nth-child(1)) {
+          display: none;
+        }
+      }
     }
 
+    // ul li:not(ul li:nth-child(1)) {
+    //   display: none;
+    // }
   }
 }

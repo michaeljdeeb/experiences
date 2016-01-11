@@ -1,0 +1,48 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+@font-face {
+  font-family: "SFUIDisplay";
+  src: url(../fonts/SF-UI-Display-Regular.otf);
+}
+@font-face {
+  font-family: "SFUIDisplay";
+  src: url(../fonts/SF-UI-Display-Bold.otf);
+  font-weight: bold;
+}
+@font-face {
+  font-family: "SFUIDisplay@2x";
+  src: url(../fonts/SF-UI-Display-Thin.otf);
+}
+@font-face {
+  font-family: "SFUIDisplay@2x";
+  src: url(../fonts/SF-UI-Display-Regular.otf);
+  font-weight: bold;
+}
+
+$retina-font-family: "SFUIDisplay@2x", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-family: "SFUIDisplay", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+$brand-dark: #09f;
+$brand-light: #2ac9fa;
+$black: #161616;
+
+$mobile-breakpoint: 48em;
+$desktop-breakpoint: 62em;
+
+$nav-height: 3.75em;
+$mobile-nav-height: 2.75em;
+
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+@import '_normalize';
+@import '_standard';
+@import '_nav';
+@import '_post';
+@import '_footer';

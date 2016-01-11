@@ -1,16 +1,18 @@
 ---
 layout: default
+active: "experiences"
 ---
 <h1>Experiences</h1>
 <p>See | Travel | Do</p>
 
-<main>
+<main class="thumbnail-list">
   {% for post in site.posts %}
   <a href="{{ post.url }}" title="{{ post.title }}">
-    <article style="background-image: url(../uploads/{{ post.date | date: "%Y/%m" }}/{{ post.image }});">
-      <h2>{{ post.title }}</h2>
-      <p>{{ post.blurb }}</p>
-
+    <article class="thumb" style="background-image: url(../uploads/{{ post.date | date: "%Y/%m" }}/{{ post.image }});">
+      <div class="details">
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.blurb }}</p>
+      </div>
     </article>
   </a>
   {% endfor %}

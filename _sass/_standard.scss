@@ -1,0 +1,40 @@
+body {
+  font-family: $base-font-family;
+}
+
+a {
+  color: $brand-light;
+  text-decoration: none;
+
+  &:visited {
+    color: $brand-dark;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.page {
+  margin: $nav-height+1em auto 0;
+  max-width: $desktop-breakpoint;
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 120dpi) {
+  body {
+    font-family: $retina-font-family;
+  }
+}
+
+@media screen and (max-width: $desktop-breakpoint) {
+  .page {
+    max-width: $mobile-breakpoint;
+  }
+}
+
+@media screen and (max-width: $mobile-breakpoint) {
+  .page {
+    margin: $mobile-nav-height+1em auto 0;
+  }
+}

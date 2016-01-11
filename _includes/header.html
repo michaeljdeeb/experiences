@@ -1,12 +1,32 @@
 <header>
   <nav role="navigation">
-    <div class="logo">michaeljdeeb.com</div>
     <ul>
-      <li>Home</li>
-      <li>Blog</li>
-      <li>Experiences</li>
-      <li>Résumé</li>
-      <li>Contact</li>
+      {% if site.name %}<li><a href="{{ site.url }}/index.html">{{ site.name }}</a></li>{% endif %}
+      {% if page.active == "home" %}
+      <li class="active"><a href="{{ site.url }}/index.html">Home</a></li>
+      {% else %}
+      <li><a href="{{ site.url }}/index.html">Home</a></li>
+      {% endif %}
+      {% if page.active == "blog" %}
+      <li class="active"><a href="{{ site.url }}/blog/index.html">Blog</a></li>
+      {% else %}
+      <li><a href="{{ site.url }}/blog/index.html">Blog</a></li>
+      {% endif %}
+      {% if page.active == "experiences" %}
+      <li class="active"><a href="{{ site.url }}/experiences/index.html">Experiences</a></li>
+      {% else %}
+      <li><a href="{{ site.url }}/experiences/index.html">Experiences</a></li>
+      {% endif %}
+      {% if page.active == "resume" %}
+      <li class="active"><a href="{{ site.url }}/resume.html">Résumé</a></li>
+      {% else %}
+      <li><a href="{{ site.url }}/resume.html">Résumé</a></li>
+      {% endif %}
+      {% if page.active == "contact" %}
+      <li class="active"><a href="{{ site.url }}/contact.html">Contact</a></li>
+      {% else %}
+      <li><a href="{{ site.url }}/contact.html">Contact</a></li>
+      {% endif %}
     </ul>
 
     <!-- <form>
