@@ -8,7 +8,7 @@ active: "experiences"
 <main class="thumbnail-list">
   {% for post in site.posts %}
   <a href="{{ post.url }}" title="{{ post.title }}">
-    <article class="thumb" style="background-image: url(../uploads/{{ post.date | date: "%Y/%m" }}/{{ post.image }});">
+    <article class="thumb" style="background-image: url(../experiences/uploads/{{ post.date | date: "%Y/%m" }}/{{ post.image }});">
       <div class="details">
         <h2>{{ post.title }}</h2>
         <p>{{ post.blurb }}</p>
