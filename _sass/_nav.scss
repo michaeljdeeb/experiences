@@ -82,19 +82,21 @@ nav {
           clear: both;
         }
 
-        &:not(&:nth-child(1)) {
-          display: none;
-          // display: list-item;
-          float: none !important;
-          margin: 0 !important;
-          padding: 0 !important;
-          background: $brand-dark;
-          background: linear-gradient(to right, $brand-dark, $brand-light);
+        display: none !important;
+        // display: list-item;
+        float: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        background: $brand-dark;
+        background: linear-gradient(to right, $brand-dark, $brand-light);
+
+        &:nth-of-type(1) {
+            display: block !important;
+        }
 
           a {
             text-align: left !important;
           }
-        }
       }
     }
 
