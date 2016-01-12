@@ -1,0 +1,86 @@
+.single-centered {
+  text-align: center;
+
+  img {
+    display: inline-block;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+.side-by-side-mixed-aspect {
+  text-align: center;
+  margin: 0 auto;
+
+  img {
+    float: left;
+    width: auto;
+    max-height: 28.65em;
+    padding-bottom: 5px;
+
+    &:nth-of-type(odd) {
+      padding-right: $gallery-spacing;
+    }
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+.side-by-side-same-aspect {
+  img {
+    float: left;
+    width: calc(50% - #{$gallery-spacing}/2);
+    padding-bottom: $gallery-spacing;
+    max-height: calc(100vh - #{$nav-height});
+
+    &:nth-of-type(odd) {
+      padding-right: $gallery-spacing;
+    }
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+@media screen and (max-width: $desktop-breakpoint) and
+(min-width: $mobile-breakpoint) {
+  .side-by-side-mixed-aspect {
+    // width: 100vw;
+    img {
+      max-height: 21.93em !important;
+    }
+  }
+}
+
+@media screen and (max-width: $mobile-breakpoint) {
+  .side-by-side-mixed-aspect {
+    // display: none;
+    width: 100vw !important;
+    margin: 0;
+    margin-left: calc(-1 * ((100vw - 100%) / 2));
+    img {
+      max-height: calc((100vw - #{$gallery-spacing})/(25/12)); // This calculation assumes images in 4:3/3:4 ratio
+    }
+  }
+
+  .side-by-side-same-aspect {
+    // padding-right: 0 !important;
+    width: 100vw !important;
+    margin-left: calc(-1 * ((100vw - 100%) / 2));
+    img {
+      width: calc(50vw - #{$gallery-spacing}/2) !important;
+      margin-left: 0;
+    }
+  }
+}

@@ -35,6 +35,8 @@ $desktop-breakpoint: 62em;
 $nav-height: 3.75em;
 $mobile-nav-height: 2.75em;
 
+$gallery-spacing: 5px;
+
 @mixin media-query($device) {
     @media screen and (max-width: $device) {
         @content;
@@ -45,4 +47,5 @@ $mobile-nav-height: 2.75em;
 @import '_standard';
 @import '_nav';
 @import '_post';
+@import '_gallery';
 @import '_footer';

@@ -2,28 +2,14 @@ img {
   display: block;
   max-width: 100%;
   max-height: calc(100vh - #{$nav-height});
+
+  &.overflow {
+    max-height: none !important;
+  }
 }
 
-.side-by-side {
-  text-align: center;
-  margin: 0 auto;
-
-  img {
-    float: left;
-    width: auto;
-    max-height: 28.65em;
-    padding-bottom: 5px;
-
-    &:nth-of-type(odd) {
-      padding-right: 5px;
-    }
-  }
-
-  &::after {
-    content: '';
-    display: block;
-    clear: both;
-  }
+.page-heading {
+  margin-left: 1em;
 }
 
 main {
@@ -134,7 +120,7 @@ main {
 }
 
 @media screen and (max-width: $mobile-breakpoint) {
-  img {
+  img.overflow {
     max-width: 100vw;
     margin-left: -1em;
   }
@@ -152,6 +138,10 @@ main {
 
   main article.thumb {
     width: 100%;
+  }
+
+  .side-by-side img {
+    padding-right: 0 !important;
   }
 
 }

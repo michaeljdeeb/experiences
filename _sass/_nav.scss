@@ -9,6 +9,10 @@ nav {
   width: 100%;
   z-index: 1;
 
+  button.mobile-dropdown {
+    display: none;
+  }
+
   ul {
     margin: 0 auto;
     max-width: $desktop-breakpoint;
@@ -58,16 +62,38 @@ nav {
   nav {
     height: $mobile-nav-height;
 
+    button.mobile-dropdown {
+      color: #fff;
+      display: block;
+      position: absolute;
+      padding: 0;
+      right: 1em;
+      top: .375em;
+      border: none;
+      background: none;
+    }
+
     ul {
       li {
         // text-align: left;
         // display: list-item;
         a {
-          padding: 0;
+          padding: .6em .8em .6em !important;
+          clear: both;
         }
 
         &:not(&:nth-child(1)) {
           display: none;
+          // display: list-item;
+          float: none !important;
+          margin: 0 !important;
+          padding: 0 !important;
+          background: $brand-dark;
+          background: linear-gradient(to right, $brand-dark, $brand-light);
+
+          a {
+            text-align: left !important;
+          }
         }
       }
     }
