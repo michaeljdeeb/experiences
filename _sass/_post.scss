@@ -68,7 +68,8 @@ main {
   }
 
   header {
-    height: 30em;
+    // height: 30em;
+    height: calc(100vh - #{$nav-height});
     width: 100vw;
     margin-left: calc(-1 * ((100vw - 100%) / 2));
     margin-top: -1em;
@@ -112,11 +113,24 @@ main {
       width: 50%;
     }
     header {
+      // height: calc(100vw - #{$nav-height}*7.2) !important; // iOS viewport includes Safari's overlaying UI elements
+      // display: none;
+
       .details {
         left: calc((100vw/2) - (#{$mobile-breakpoint}/2) + 1em) !important;
       }
     }
   }
+}
+
+@media screen and (max-device-width: 64em) and
+(min-device-width: $mobile-breakpoint) {
+  main {
+    header {
+      height: calc(100vh - #{$nav-height}*2.3) !important; // iOS viewport includes Safari's overlaying UI elements
+    }
+  }
+
 }
 
 @media screen and (max-width: $mobile-breakpoint) {
@@ -127,7 +141,8 @@ main {
 
   main {
     header {
-      height: 15em;
+      // height: 15em;
+      height: calc(100vh - #{$mobile-nav-height}*2.5) !important; // iOS viewport includes Safari's overlaying UI elements
       margin-top: -1em;
 
       .details {
