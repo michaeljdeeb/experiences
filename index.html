@@ -14,7 +14,7 @@ title: "Experiences"
     <article class="thumb" style="background-image: url(../experiences/uploads/{{ post.date | date: "%Y/%m" }}/{{ post.image }});">
       <div class="details">
         <h2>{{ post.title }}</h2>
-        <p>{{ post.blurb }}</p>
+        <p><i class="fa fa-{{ post.blurb[0] }}"></i> {{ post.blurb[1] }}</p>
       </div>
     </article>
   </a>

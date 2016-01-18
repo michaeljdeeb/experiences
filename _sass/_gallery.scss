@@ -20,7 +20,7 @@
     float: left;
     width: auto;
     max-height: 28.65em;
-    padding-bottom: 5px;
+    padding-bottom: $gallery-spacing;
 
     &:nth-of-type(odd) {
       padding-right: $gallery-spacing;
@@ -56,9 +56,10 @@
 @media screen and (max-width: $desktop-breakpoint) and
 (min-width: $mobile-breakpoint) {
   .side-by-side-mixed-aspect {
-    // width: 100vw;
+    margin-left: calc(-1 * ((100vw - 100%) / 2));
+    width: 100vw;
     img {
-      max-height: 21.93em !important;
+      max-height: calc((100vw - #{$gallery-spacing})/(25/12));
     }
   }
 }

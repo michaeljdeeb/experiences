@@ -22,11 +22,11 @@
   font-weight: bold;
 }
 
-$retina-font-family: "SFUIDisplay@2x", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $base-font-family: "SFUIDisplay", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$retina-font-family: "SFUIDisplay@2x", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-$brand-dark: #09f;
 $brand-light: #2ac9fa;
+$brand-dark: #09f;
 $black: #161616;
 
 $mobile-breakpoint: 48em;
@@ -35,7 +35,8 @@ $desktop-breakpoint: 62em;
 $nav-height: 3.75em;
 $mobile-nav-height: 2.75em;
 
-$gallery-spacing: 5px;
+$gallery-spacing: .3125em;
+$one-px: .0625em;
 
 @mixin media-query($device) {
     @media screen and (max-width: $device) {

@@ -6,7 +6,7 @@ layout: default
   <header style="background-image: url(../../experiences/uploads/{{ page.date | date: "%Y/%m" }}/{{ page.image }});">
     <div class="details">
       <h1>{{ page.title }}</h1>
-      <p>{{ page.blurb }}</p>
+      <p><i class="fa fa-{{ page.blurb[0] }}"></i> {{ page.blurb[1] }}</p>
     </div>
     <time datetime="{{page.date | date: "%Y-%m-%d" }}">{{page.date | date: "%Y-%m-%d" }}</time>
   </header>
@@ -14,5 +14,14 @@ layout: default
   <article>
     {{ content }}
   </article>
+
+  <aside>
+    <h3>TL;DR</h3>
+    {% for callout_hash in page.callouts %}
+      {% for callout in callout_hash %}
+        <p><i class="fa fa-{{ callout[0] }}"></i> {{ callout[1] }}</p>
+      {% endfor %}
+    {% endfor %}
+  </aside>
 
 </main>

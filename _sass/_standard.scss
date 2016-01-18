@@ -33,7 +33,7 @@ a {
   }
 }
 
-@media screen and (max-width: $mobile-breakpoint) {
+@media screen and (max-width: $mobile-breakpoint - $one-px) {
   .page {
     margin: $mobile-nav-height+1em auto 0;
   }

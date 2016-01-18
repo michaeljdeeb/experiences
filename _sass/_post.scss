@@ -1,7 +1,7 @@
 img {
   display: block;
-  max-width: 100%;
   max-height: calc(100vh - #{$nav-height});
+  max-width: 100%;
 
   &.overflow {
     max-height: none !important;
@@ -49,6 +49,29 @@ main {
     }
   }
 
+  aside {
+    border-top: $one-px solid #e8e8e8;
+
+    h3 {
+      // font-size: 1.75em;
+      font-size: 3em;
+      margin: .25em 0 0;
+    }
+
+    p {
+      font-size: 1.25em;
+      float: left;
+      margin: 1em 1em .5em 0;
+      width: calc(50% - 2em);
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+  }
+
   &.thumbnail-list {
     a {
       color: #fff;
@@ -80,6 +103,7 @@ main {
     position: relative;
     background-size: cover;
     background-position: center center;
+    transition: height .5s ease-in-out;
 
     .details {
       bottom: 1em;
@@ -95,10 +119,12 @@ main {
 
     h1 {
       font-size: 3em;
+      // font-size: 5em;
     }
 
     p {
       font-size: 1.5em;
+      // font-size: 2.5em;
     }
 
     time {
@@ -118,7 +144,7 @@ main {
   }
 }
 
-@media screen and (max-width: $desktop-breakpoint) and
+@media screen and (max-width: $desktop-breakpoint - $one-px) and
 (min-width: $mobile-breakpoint) {
   main {
     article.thumb {
@@ -138,27 +164,36 @@ main {
 @media screen and (max-device-width: 64em) and
 (min-device-width: $mobile-breakpoint) {
   main {
-    header {
-      height: calc(100vh - #{$nav-height}*2.3) !important; // iOS viewport includes Safari's overlaying UI elements
+    header.js-mobile-safari-fix {
+        height: calc(100vh - #{$nav-height}*2.3) !important; // iOS viewport includes Safari's overlaying UI elements
     }
   }
 
 }
 
-@media screen and (max-width: $mobile-breakpoint) {
+@media screen and (max-width: $mobile-breakpoint - $one-px) {
   img.overflow {
     max-width: 100vw;
     margin-left: -1em;
   }
 
   main {
+    aside {
+      p {
+        float: none;
+        width: 100%;
+      }
+    }
     header {
-      // height: 15em;
-      height: calc(100vh - #{$mobile-nav-height}*2.5) !important; // iOS viewport includes Safari's overlaying UI elements
+      height: calc(100vh - #{$mobile-nav-height});
       margin-top: -1em;
 
       .details {
         left: 1em !important;
+      }
+
+      &.js-mobile-safari-fix {
+        height: calc(100vh - #{$mobile-nav-height}*2.5) !important; // iOS viewport includes Safari's overlaying UI elements
       }
     }
   }
