@@ -98,7 +98,7 @@ nav {
       z-index: 1;
 
       a {
-        padding: .6em .8em !important;
+        padding: .6em .8em;
       }
     }
 
@@ -131,48 +131,25 @@ nav {
       li {
         background: $brand-dark;
         background: linear-gradient(to right, $brand-dark, $brand-light);
-        // display: none;
         display: list-item;
         float: none;
-        // font-size: 0;
         transition: transform .4s ease-in-out;
 
         &.js-nav-visible {
-          // font-size: 1em;
           transform: translateY(16.75em);
         }
 
         a {
-          padding: .875em 1em !important;
+          padding: .875em 1em;
           text-align: left;
-          // transform: translateY(-8em);
-          // z-index: -1;
         }
 
         &:nth-of-type(1) {
-          // display: list-item;
 
           &.js-divider {
             border-top: $one-px solid #fff;
           }
-
-          a {
-            // padding: .6em .8em !important;
-            // width: 50%;
-
-            // &:hover {
-            //   background-color: transparent;
-            //   color: #fff;
-            // }
-          }
         }
-        // TODO Chrome/Firefox hate this selector
-        // &:not(&:nth-of-type(1)) {
-        //   a {
-        //     padding: .875em 1em !important;
-        //     // transform: translateY(-5em);
-        //   }
-        // }
       }
     }
   }

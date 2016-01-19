@@ -4,12 +4,6 @@ div.single-centered {
   img {
     display: inline-block;
   }
-
-  // &::after {
-  //   content: '';
-  //   display: block;
-  //   clear: both;
-  // }
 }
 
 .side-by-side-mixed-aspect {
@@ -58,29 +52,30 @@ div.single-centered {
   .side-by-side-mixed-aspect {
     margin-left: calc(-1 * ((100vw - 100%) / 2));
     width: 100vw;
+
     img {
-      max-height: calc((100vw - #{$gallery-spacing})/(25/12));
+      max-height: calc((100vw - #{$gallery-spacing})/(25/12)); // This calculation assumes images in 4:3/3:4 ratio
     }
   }
 }
 
 @media screen and (max-width: $mobile-breakpoint) {
   .side-by-side-mixed-aspect {
-    // display: none;
-    width: 100vw !important;
+    width: 100vw;
     margin: 0;
     margin-left: calc(-1 * ((100vw - 100%) / 2));
+
     img {
       max-height: calc((100vw - #{$gallery-spacing})/(25/12)); // This calculation assumes images in 4:3/3:4 ratio
     }
   }
 
   .side-by-side-same-aspect {
-    // padding-right: 0 !important;
-    width: 100vw !important;
+    width: 100vw;
     margin-left: calc(-1 * ((100vw - 100%) / 2));
+
     img {
-      width: calc(50vw - #{$gallery-spacing}/2) !important;
+      width: calc(50vw - #{$gallery-spacing}/2);
       margin-left: 0;
     }
   }
