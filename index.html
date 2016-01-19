@@ -10,7 +10,7 @@ title: "Experiences"
 
 <main class="thumbnail-list">
   {% for post in site.posts %}
-  <a href="{{ post.url }}" title="{{ post.title }}">
+  <a href="{{ site.permalink_fix }}{{ post.url }}" title="{{ post.title }}">
     <article class="thumb" style="background-image: url({{ site.uploads_path }}{{ post.date | date: "%Y/%m" }}/{{ post.image }});">
       <div class="details">
         <h2>{{ post.title }}</h2>

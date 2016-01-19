@@ -19,3 +19,4 @@ nav:
   - Contact: '../../contact.html'
 uploads_path: '../../uploads/'
 assets_path: '../../assets/'
+permalink_fix: ''
