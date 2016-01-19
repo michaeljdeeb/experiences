@@ -169,6 +169,11 @@ main {
     }
   }
 
+  img.overflow {
+    max-width: 100vw !important;
+    margin-left: calc(-1 * ((100vw - 100%) / 2));
+  }
+
 }
 
 @media screen and (max-width: $mobile-breakpoint - $one-px) {

@@ -12,7 +12,7 @@
     <meta name="twitter:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}">
     <meta name="twitter:description" content="{{ page.description }}">
     {%if page.image %}
-      <meta name="twitter:image" content="{{ site.url }}/uploads/{{ page.date | date: "%Y/%m" }}/{{ page.image }}">
+      <meta name="twitter:image" content="{{ site.url }}{{ site.permalink_fix }}/uploads/{{ page.date | date: "%Y/%m" }}/{{ page.image }}">
     {% else %}
       <!-- TODO - Pick default site image -->
     {% endif %}
