@@ -4,7 +4,7 @@ img {
   max-width: 100%;
 
   &.overflow {
-    max-height: none !important;
+    max-height: none;
   }
 }
 
@@ -118,13 +118,11 @@ main {
     }
 
     h1 {
-      font-size: 3em;
-      // font-size: 5em;
+      font-size: 5em;
     }
 
     p {
-      font-size: 1.5em;
-      // font-size: 2.5em;
+      font-size: 2em;
     }
 
     time {
@@ -151,11 +149,9 @@ main {
       width: 50%;
     }
     header {
-      // height: calc(100vw - #{$nav-height}*7.2) !important; // iOS viewport includes Safari's overlaying UI elements
-      // display: none;
 
       .details {
-        left: calc((100vw/2) - (#{$mobile-breakpoint}/2) + 1em) !important;
+        left: calc((100vw/2) - (#{$mobile-breakpoint}/2) + 1em);
       }
     }
   }
@@ -165,12 +161,12 @@ main {
 (min-device-width: $mobile-breakpoint) {
   main {
     header.js-mobile-safari-fix {
-        height: calc(100vh - #{$nav-height}*2.3) !important; // iOS viewport includes Safari's overlaying UI elements
+        height: calc(100vh - #{$nav-height}*2.3); // iOS viewport includes Safari's overlaying UI elements
     }
   }
 
   img.overflow {
-    max-width: 100vw !important;
+    max-width: 100vw;
     margin-left: calc(-1 * ((100vw - 100%) / 2));
   }
 
@@ -193,12 +189,20 @@ main {
       height: calc(100vh - #{$mobile-nav-height});
       margin-top: -1em;
 
+      h1 {
+        font-size: 3em;
+      }
+
+      p {
+        font-size: 1.5em;
+      }
+
       .details {
-        left: 1em !important;
+        left: 1em;
       }
 
       &.js-mobile-safari-fix {
-        height: calc(100vh - #{$mobile-nav-height}*2.5) !important; // iOS viewport includes Safari's overlaying UI elements
+        height: calc(100vh - #{$mobile-nav-height}*2.5); // iOS viewport includes Safari's overlaying UI elements
       }
     }
   }
@@ -206,9 +210,4 @@ main {
   main article.thumb {
     width: 100%;
   }
-
-  .side-by-side img {
-    padding-right: 0 !important;
-  }
-
 }
