@@ -6,7 +6,7 @@ date:   2016-01-07 09:41:00
 category: [experiences]
 tags: [Puerto Vallarta, Photos]
 description: "A gallery of my trip to Puerto Vallarta."
-image: "img_1400_2.jpg"
+image: "IMG_1400.jpg"
 blurb: ["map-marker", "Puerto Vallarta, JA, MX"]
 photoStats: 20
 callouts:
