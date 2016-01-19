@@ -6,7 +6,19 @@
     <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
     <meta name="description" content="{{ page.description }}">
 
-    <link rel="stylesheet" href="../../experiences/assets/css/main.css">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@{{ site.twitter_username }}">
+    <meta name="twitter:creator" content="@{{ site.twitter_username }}">
+    <meta name="twitter:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}">
+    <meta name="twitter:description" content="{{ page.description }}">
+    {%if page.image %}
+      <meta name="twitter:image" content="{{ site.url }}/uploads/{{ page.date | date: "%Y/%m" }}/{{ page.image }}">
+    {% else %}
+      <!-- TODO - Pick default site image -->
+    {% endif %}
+
+    <link rel="apple-touch-icon" href="{{ site.assets_path }}/images/apple-touch-icon.png">
+    <link rel="stylesheet" href="{{ site.assets_path }}/css/main.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <!--[if IE]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script><![endif]-->
 </head>

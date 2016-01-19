@@ -1,8 +1,8 @@
 # Site settings
 name: michaeljdeeb.com
-title: "Michael J. Deeb"
-baseurl: "/" # the subpath of your site, e.g. /blog/
-url: "http://michaeljdeeb.com" # the base hostname & protocol for your site
+title: 'Michael J. Deeb'
+baseurl: '/' # the subpath of your site, e.g. /blog/
+url: 'http://michaeljdeeb.com' # the base hostname & protocol for your site
 permalink: /:title
 twitter_username: michaeljdeeb
 github_username:  michaeljdeeb
@@ -10,4 +10,12 @@ timezone: America/Los_Angeles
 # Build settings
 markdown: kramdown
 sass:
-    style: compressed
+  style: compressed
+nav:
+  - Home: '../../index.html'
+  - Blog: '../../blog/index.html'
+  - Experiences: '../../experiences/index.html'
+  - Résumé: '../../resume.html'
+  - Contact: '../../contact.html'
+uploads_path: '../../uploads/'
+assets_path: '../../assets/'

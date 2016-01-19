@@ -1,15 +1,15 @@
-.single-centered {
+div.single-centered {
   text-align: center;
 
   img {
     display: inline-block;
   }
 
-  &::after {
-    content: '';
-    display: block;
-    clear: both;
-  }
+  // &::after {
+  //   content: '';
+  //   display: block;
+  //   clear: both;
+  // }
 }
 
 .side-by-side-mixed-aspect {
