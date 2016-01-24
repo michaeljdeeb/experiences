@@ -33,7 +33,7 @@ div.single-centered {
     float: left;
     width: calc(50% - #{$gallery-spacing}/2);
     padding-bottom: $gallery-spacing;
-    max-height: calc(100vh - #{$nav-height});
+    max-height: none;
 
     &:nth-of-type(odd) {
       padding-right: $gallery-spacing;
